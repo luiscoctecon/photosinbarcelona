@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barcelona-based photography portfolio of Luis. Modern gallery, biography, and contact form. Stunning photos in Barcelona.">
+    <meta name="keywords" content="Barcelona, photography, portfolio, photos, gallery, modern, Luis, photographer, Spain, urban, travel, art, contact, biography, photo gallery, based in Barcelona">
+    <title>Photos In Barcelona | Luis Photography Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><div class="logo">Photos In Barcelona</div></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.instagram.com/luiscaptures_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="social-link">Instagram</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="gallery" class="gallery-section">
+            <h1>Let's work together</h1>
+            <div class="gallery-grid">
+                <!-- Example images, using Unsplash placeholders for demo -->
+                 <a href="personalbrand.html" class="gallery-item-link">
+                <div class="gallery-item"><img src="photo1.jpg" alt="Barcelona Photo 1"><div class="overlay"></div></div>
+            <h2 class="personal-branding-title">Grow Your Personal Brand</h2>
+            </a>
+            <a href="productbrand.html" class="gallery-item-link">
+                <div class="gallery-item"><img src="photo2.jpg" alt="Barcelona Photo 2"><div class="overlay"></div></div>
+                <h2 class="product-brand-item">Grow Your Product Brand</h2></a>
+            <a href="events.html" class="gallery-item-link">
+                <div class="gallery-item"><img src="photo3.jpg" alt="Barcelona Photo 3"><div class="overlay"></div></div>
+                <h2 class="event-item">Capture Your Events  </h2>
+            </a>
+               
+                <!-- Add more images as needed -->
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Large Photo">
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Luis, a passionate photographer based in Barcelona. My style blends urban exploration with vibrant city life, capturing the unique spirit of Barcelona through my lens. Welcome to my portfolio!</p>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <form class="contact-form" autocomplete="off">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2026 Luis | #photosbarcelona</span>
+            <nav class="footer-nav">
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.instagram.com/luiscaptures_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
+            </nav>
+        </div>
+    </footer>
+  
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barcelona-based photography portfolio of Luis. Modern gallery, biography, and contact form. Stunning photos in Barcelona.">
+    <meta name="keywords" content="Barcelona, photography, portfolio, photos, gallery, modern, Luis, photographer, Spain, urban, travel, art, contact, biography, photo gallery, based in Barcelona">
+    <title>Photos In Barcelona | Product Brand </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           <a href="index.html"><div class="logo">Photos In Barcelona</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="https://www.instagram.com/luiscaptures_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="social-link">Instagram</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <section id="personal" class="personal-gallery">
+        <h1 class="section-title">Grow Your Product Brand</h1>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="product1.dng" alt="Product Brand Photo 1"></div>
+                <div class="carousel-item"><img src="product2.jpg" alt="Product Brand Photo 2"></div>
+                <div class="carousel-item"><img src="product3.dng" alt="Product Brand Photo 3"></div>
+                <div class="carousel-item"><img src="product4.jpg" alt="Product Brand Photo 4"></div>
+            </div>
+            <div class="carousel-controls"></div>
+                <button id="prev-btn" aria-label="Previous Slide">&#8592; Prev</button>
+                <button id="pause-btn" aria-label="Pause Carousel">Pause</button>
+                <button id="next-btn" aria-label="Next Slide">Next &#8594;</button>
+            </div>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const items = document.querySelectorAll('.carousel-item');
+            const itemCount = items.length;
+            let intervalId;
+            let isPaused = false;
+
+            // Clone first and last for infinite effect
+            const firstClone = items[0].cloneNode(true);
+            const lastClone = items[itemCount - 1].cloneNode(true);
+            track.appendChild(firstClone);
+            track.insertBefore(lastClone, items[0]);
+
+            let currentIndex = 1;
+            let itemWidth = items[0].offsetWidth;
+            track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+
+            function moveToIndex(index) {
+                track.style.transition = "transform 0.5s ease-in-out";
+                track.style.transform = `translateX(-${itemWidth * index}px)`;
+            }
+
+            function moveCarousel() {
+                currentIndex++;
+                moveToIndex(currentIndex);
+
+                track.addEventListener('transitionend', () => {
+                    if (currentIndex === itemCount + 1) {
+                        track.style.transition = "none";
+                        currentIndex = 1;
+                        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+                    }
+                }, { once: true });
+            }
+
+            function prevCarousel() {
+                currentIndex--;
+                moveToIndex(currentIndex);
+
+                track.addEventListener('transitionend', () => {
+                    if (currentIndex === 0) {
+                        track.style.transition = "none";
+                        currentIndex = itemCount;
+                        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+                    }
+                }, { once: true });
+            }
+
+            function startCarousel() {
+                intervalId = setInterval(moveCarousel, 3000);
+            }
+
+            function pauseCarousel() {
+                clearInterval(intervalId);
+            }
+
+            // Controls
+            document.getElementById('pause-btn').addEventListener('click', function() {
+                if (isPaused) {
+                    startCarousel();
+                    this.textContent = 'Pause';
+                } else {
+                    pauseCarousel();
+                    this.textContent = 'Play';
+                }
+                isPaused = !isPaused;
+            });
+
+            document.getElementById('next-btn').addEventListener('click', function() {
+                pauseCarousel();
+                isPaused = true;
+                document.getElementById('pause-btn').textContent = 'Play';
+                moveCarousel();
+            });
+
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                pauseCarousel();
+                isPaused = true;
+                document.getElementById('pause-btn').textContent = 'Play';
+                prevCarousel();
+            });
+
+            // Responsive: update width on resize
+            window.addEventListener('resize', () => {
+                itemWidth = items[0].offsetWidth;
+                track.style.transition = "none";
+                track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+            });
+
+            startCarousel();
+        });
+        </script>
+    </section>
+    <section id="close">
+        <h3>Ready to Elevate Your Product Brand?</h3>
+        <p>Contact me today to discuss how we can create stunning visuals that truly represent your product brand.</p>
+        <button class="contact-button" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Get in Touch</button>
+    </section>
+        
+      
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <form class="contact-form" autocomplete="off">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+          <div class="footer-content">
+            <span>&copy; 2026 | Photos in Barcelona</span>
+            <nav class="footer-nav">
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.instagram.com/luiscaptures_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
+            </nav>
+        </div>
+    </footer>
