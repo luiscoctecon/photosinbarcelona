@@ -25,7 +25,7 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold tracking-tight">
-            Photos in <span className="text-accent">Barcelona</span>
+            Photos<span className="text-accent">Barcelona</span>
           </Link>
 
           {/* Desktop Navigation */}
