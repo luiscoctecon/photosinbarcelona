@@ -5,7 +5,7 @@
 
   export default defineConfig({
     plugins: [react()],
-    base:"/photosinbarcelona",
+    base:"/",
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
