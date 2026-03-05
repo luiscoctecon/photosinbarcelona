@@ -15,7 +15,7 @@ import Root from './pages/Root'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Router basename="/photosinbarcelona">
+    <Router basename="/">
       <Routes>
         <Route element={<Root />}>
           <Route index element={<Home />} />
