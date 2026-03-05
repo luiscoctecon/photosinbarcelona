@@ -6,6 +6,7 @@ command = "npm run build"
 cwd = "."
 
 [env.production]
-name = "photosbarcelona"
+# wrangler.toml
+name = 'photosinbarcelona'
 route = "photosbarcelona.com/*"
 zone_id = ""
