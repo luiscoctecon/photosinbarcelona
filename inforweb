@@ -1,0 +1,138 @@
+Act as a senior web developer and UX designer.
+
+Build a high-performance photography portfolio website.
+
+Project name: Photos in Barcelona
+Domain: photosbarcelona.com
+
+Purpose:
+Generate leads and bookings for photography services in Barcelona.
+
+The website must be extremely fast, SEO optimized, mobile responsive, and designed to convert visitors into clients.
+
+Style:
+Modern, minimal, luxury photography portfolio.
+
+Use large images, elegant typography, and clear call-to-action buttons.
+
+TECH REQUIREMENTS
+- HTML5
+- CSS3
+- Vanilla JavaScript (no heavy frameworks)
+- Optimized for speed and SEO
+- Lazy load images
+- Compressed media
+- Accessibility best practices
+
+PAGES REQUIRED
+
+1. HOME PAGE
+Hero section:
+- Full screen image/video slider
+- Each slide represents a service:
+   • Events Photography
+   • Brand Photography
+   • Product Photography
+   • Real Estate Photography
+
+Each slide must include:
+- Background image or video
+- Title
+- Short description
+- Call-to-action button:
+   "Book Event Photography"
+   "Book Brand Shoot"
+   "Book Product Photography"
+   "Book Real Estate Photography"
+
+CTA buttons should scroll to a booking section or link to the service page.
+
+Home page sections:
+- Services overview with icons
+- Portfolio gallery grid
+- Client testimonials
+- About preview
+- Strong CTA section: "Book your photoshoot in Barcelona"
+
+2. ABOUT PAGE
+Include:
+- Photographer story
+- Mission and philosophy
+- Why clients should work with me
+- Portrait photo
+- CTA: "Book a session"
+
+3. SERVICE PAGES (separate page for each)
+
+Events Photography
+Brand Photography
+Product Photography
+Real Estate Photography
+
+Each service page must include:
+- Hero image
+- Description of the service
+- Portfolio gallery
+- Process steps
+- Pricing placeholder
+- Booking button
+- FAQ section
+
+4. CONTACT / BOOKING PAGE
+
+Include:
+- Booking form
+- Name
+- Email
+- Phone
+- Type of shoot
+- Message
+
+Also include:
+- WhatsApp contact button
+- Email contact
+- Map of Barcelona
+
+DESIGN REQUIREMENTS
+
+Navigation:
+- Sticky navbar
+- Logo on left
+- Links to all pages
+- "Book Now" button highlighted
+
+Footer:
+- Social media icons
+- Copyright
+- Quick links
+- Contact info
+
+ANIMATIONS
+- Smooth scroll
+- Subtle fade-in animations
+- Image hover effects
+
+SEO
+- Optimized meta titles
+- Schema markup for photography services
+- Local SEO for Barcelona
+
+OUTPUT
+Provide:
+1. Complete folder structure
+2. HTML files
+3. CSS file
+4. JavaScript file
+5. Instructions to deploy the site
+
+COLORS
+Primary
+- #111111
+- #F8F8F8
+- #EAEAEA
+
+Accent
+#C65D3A
+
+EXTRA FEATURE
+- Add a floating Booking Button that is alwasys visible in the bottom corner

@@ -1,70 +1,178 @@
-# Getting Started with Create React App
+# Photos in Barcelona - Photography Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, high-performance photography portfolio website built with React, TypeScript, Tailwind CSS, and Vite.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 **Modern Design**: Luxury, minimal aesthetic with professional gradients and hover effects
+- ⚡ **High Performance**: Built with Vite for fast development and production builds
+- 📱 **Fully Responsive**: Mobile-first design that works on all devices
+- 🔍 **SEO Optimized**: Meta tags, structured data, and optimized HTML
+- ♿ **Accessible**: WCAG compliant with proper semantic HTML and ARIA labels
+- 🎬 **Smooth Animations**: Fade-in effects and smooth scrolling throughout
+- 🦾 **Type-Safe**: Full TypeScript support for better developer experience
 
-### `npm start`
+## Services Included
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Events Photography
+- Brand Photography
+- Product Photography
+- Real Estate Photography
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages
 
-### `npm test`
+- Home - Hero slider with services overview and testimonials
+- Service Pages - Dedicated pages for each photography service
+- Contact/Booking - Professional booking form with WhatsApp integration
+- 404 - Custom 404 page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide Icons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js 16+ and npm
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start development server
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The site will be available at `http://localhost:5173/photosinbarcelona`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This generates optimized files in the `dist/` folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Preview Production Build
 
-### Code Splitting
+```bash
+npm run preview
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
+### Option 1: Netlify (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `dist`
 
-### Making a Progressive Web App
+### Option 2: Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Framework: Vite
+4. Deploy
 
-### Advanced Configuration
+### Option 3: Traditional Hosting (cPanel, etc.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Build the project: `npm run build`
+2. Upload the `dist` folder contents to your hosting via FTP/SFTP
+3. Ensure your server is configured to serve `index.html` for all routes (important for client-side routing)
 
-### Deployment
+#### Apache .htaccess Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create a `.htaccess` file in your public directory:
 
-### `npm run build` fails to minify
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /photosinbarcelona/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /photosinbarcelona/index.html [L]
+</IfModule>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Nginx Configuration
+
+```nginx
+server {
+  listen 80;
+  server_name photosbarcelona.com;
+
+  root /var/www/photosbarcelona;
+
+  location /photosinbarcelona {
+    try_files $uri $uri/ /photosinbarcelona/index.html;
+  }
+}
+```
+
+## Customization
+
+### Colors
+
+Customize colors in `tailwind.config.js`:
+
+```javascript
+colors: {
+  'primary-dark': '#111111',
+  'primary-light': '#F8F8F8',
+  'primary-gray': '#EAEAEA',
+  'accent': '#C65D3A',
+}
+```
+
+### Contact Information
+
+Update contact details in:
+- `src/components/Header.tsx` - Header nav links
+- `src/components/Footer.tsx` - Footer contact info
+- `src/components/FloatingBookingButton.tsx` - WhatsApp number
+- `src/pages/Contact.tsx` - Contact page details
+
+### Content
+
+Edit page content in respective files:
+- Home: `src/pages/Home.tsx`
+- Events: `src/pages/Events.tsx`
+- Brand: `src/pages/PersonalBrand.tsx`
+- Product: `src/pages/ProductPhotography.tsx`
+- Real Estate: `src/pages/RealEstate.tsx`
+
+## Performance Optimization
+
+- Images are loaded on demand (lazy loading ready)
+- CSS is tree-shaken and minified
+- JavaScript is code-split per route
+- Gzip compression enabled by default
+
+## SEO Features
+
+- Meta tags for social sharing
+- Semantic HTML structure
+- Fast page load times
+- Mobile optimization
+- Ready for schema markup
+
+## License
+
+Private - Photography Portfolio
+
+## Support
+
+For questions or customization, contact the photographer directly at:
+- Email: info@photosbarcelona.com
+- Phone: +34 600 000 000
+- WhatsApp: https://wa.me/34600000000
