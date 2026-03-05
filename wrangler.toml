@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration
+name = "photosbarcelona"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[env.production]
+name = "photosbarcelona"
+route = "photosbarcelona.com/*"
+zone_id = ""
