@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-primary-gray hover:text-accent transition-colors">
                 <Phone size={16} />
-                <a href="tel:+34600000000">+34 600 000 000</a>
+                <a href="https://wa.me/15035591769">+1 503-559-1769</a>
               </li>
               <li className="flex items-center gap-2 text-primary-gray">
                 <MapPin size={16} />
@@ -95,26 +95,13 @@ export default function Footer() {
           <h4 className="font-semibold mb-4">Follow Us</h4>
           <div className="flex gap-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/luiscaptures_/"
               aria-label="Instagram"
               className="text-primary-gray hover:text-accent transition-colors"
             >
               <Instagram size={24} />
             </a>
-            <a
-              href="https://facebook.com"
-              aria-label="Facebook"
-              className="text-primary-gray hover:text-accent transition-colors"
-            >
-              <Facebook size={24} />
-            </a>
-            <a
-              href="https://twitter.com"
-              aria-label="Twitter"
-              className="text-primary-gray hover:text-accent transition-colors"
-            >
-              <Twitter size={24} />
-            </a>
+            
           </div>
         </div>
 

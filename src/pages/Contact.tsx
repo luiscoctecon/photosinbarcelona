@@ -49,7 +49,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-primary-dark mb-1">Email</h3>
-                <a href="mailto:info@photosbarcelona.com" className="text-primary-gray hover:text-accent transition-colors">
+                <a href="mailto:info@photosbarcelona.com" className="text-black hover:text-accent transition-colors">
                   info@photosbarcelona.com
                 </a>
               </div>
@@ -62,8 +62,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-primary-dark mb-1">Phone</h3>
-                <a href="tel:+34600000000" className="text-primary-gray hover:text-accent transition-colors">
-                  +34 600 000 000
+                <a href="tel:+34637969822" className="text-black hover:text-accent transition-colors">
+                  +34 637 969 822
                 </a>
               </div>
             </div>
@@ -75,13 +75,13 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-bold text-primary-dark mb-1">Location</h3>
-                <p className="text-primary-gray">Barcelona, Spain</p>
+                <p className="text-black">Barcelona, Spain</p>
               </div>
             </div>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/34600000000?text=I'm%20interested%20in%20booking%20a%20photoshoot"
+              href="https://wa.me/15035591769?text=I'm%20interested%20in%20booking%20a%20photoshoot"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-block bg-green-500 text-white px-6 py-3 rounded font-semibold hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
