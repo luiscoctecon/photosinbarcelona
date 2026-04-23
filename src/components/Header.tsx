@@ -29,14 +29,10 @@ export default function Header() {
               Events
             </Link>
             <Link to="/brand" className={`transition-colors ${isActive('/brand')}`}>
-              Brand
+              Brand & Product 
             </Link>
-            <Link to="/product" className={`transition-colors ${isActive('/product')}`}>
-              Product
-            </Link>
-            <Link to="/real-estate" className={`transition-colors ${isActive('/real-estate')}`}>
-              Real Estate
-            </Link>
+            
+           
             <Link to="/contact" className={`transition-colors ${isActive('/contact')}`}>
               Contact
             </Link>

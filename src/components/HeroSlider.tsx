@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const slides = [
   {
     id: 1,
+    
     title: 'Events Photography',
     description: 'Capture the magic of your special moments with professional event photography.',
     cta: 'Book Event Photography',
@@ -27,14 +28,7 @@ const slides = [
     link: '/product',
     bgColor: 'bg-gradient-to-r from-primary-dark to-accent',
   },
-  {
-    id: 4,
-    title: 'Real Estate Photography',
-    description: 'Present your properties beautifully with professional real estate photography.',
-    cta: 'Book Real Estate Photography',
-    link: '/real-estate',
-    bgColor: 'bg-gradient-to-r from-accent to-accent',
-  },
+
 ]
 
 export default function HeroSlider() {

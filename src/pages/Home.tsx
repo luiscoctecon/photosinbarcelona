@@ -10,32 +10,20 @@ const services = [
     description: 'From weddings to corporate events, we capture every magical moment with professional precision.',
     link: '/events',
     cta: 'Learn More',
+   
     
   },
   {
     icon: Sparkles,
-    title: 'Brand Photography',
+    title: 'Brand & Product Photography',
     description: 'Strengthen your brand with stunning professional photography that tells your story.',
     link: '/brand',
     cta: 'Learn More',
     
   },
-  {
-    icon: Package,
-    title: 'Product Photography',
-    description: 'Make your products shine with high-quality photography that increases sales and engagement.',
-    link: '/product',
-    cta: 'Learn More',
-    
-  },
-  {
-    icon: Building2,
-    title: 'Real Estate Photography',
-    description: 'Showcase properties in their best light with stunning real estate photography.',
-    link: '/real-estate',
-    cta: 'Learn More',
-    
-  },
+  
+  
+ 
 ]
 
 const testimonials = [

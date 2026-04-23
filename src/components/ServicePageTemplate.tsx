@@ -23,13 +23,13 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
       <section className="relative h-96 md:h-[450px] bg-gradient-to-r from-accent to-primary-dark flex items-center justify-center">
         <div className="text-center text-primary-light px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">{title}</h1>
-          <p className="text-xl md:text-2xl text-primary-gray">{description}</p>
+          <p className="text-xl md:text-2xl text-primary">{description}</p>
         </div>
       </section>
 
       {/* Breadcrumb */}
       <section className="bg-primary-light border-b border-primary-gray py-4 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 text-sm text-primary-gray">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 text-sm text-gray">
           <Link to="/" className="hover:text-accent transition-colors">
             Home
           </Link>
@@ -42,8 +42,8 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-dark">About This Service</h2>
-          <p className="text-lg text-primary-gray leading-relaxed mb-4">{description}</p>
-          <p className="text-lg text-primary-gray leading-relaxed">
+          <p className="text-lg text-gray leading-relaxed mb-4">{description}</p>
+          <p className="text-lg text-gray leading-relaxed">
             We specialize in delivering exceptional results that exceed expectations. Our team brings creativity,
             technical expertise, and attention to detail to every project.
           </p>
@@ -73,10 +73,10 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
 
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-gray">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-primary-dark">Our Process</h2>
 
-          <div className="space-y-8">
+          <div className="space-y-8 text-primary-dark">
             {[
               {
                 step: 1,
@@ -107,7 +107,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
                 </div>
                 <div className="flex-grow">
                   <h3 className="text-xl font-bold text-primary-dark mb-2">{item.title}</h3>
-                  <p className="text-primary-gray leading-relaxed">{item.description}</p>
+                  <p className="text-gray leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-dark">Pricing</h2>
           <div className="bg-primary-light border-2 border-accent rounded-lg p-8 text-center mb-8">
-            <p className="text-lg text-primary-gray mb-4">
+            <p className="text-lg text-gray mb-4">
               Custom packages available based on your requirements. Contact us for detailed pricing.
             </p>
             <Link

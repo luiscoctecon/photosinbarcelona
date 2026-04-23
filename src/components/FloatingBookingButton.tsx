@@ -20,7 +20,7 @@ export default function FloatingBookingButton() {
     <div className="fixed bottom-8 right-8 z-40 flex gap-3">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/34600000000?text=I'm%20interested%20in%20booking%20a%20photoshoot"
+        href="https://wa.me/15035591769?text=I'm%20interested%20in%20booking%20a%20photoshoot"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 animate-bounce"
